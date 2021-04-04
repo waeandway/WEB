@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소탐색</title>
+    <style>
+        .container *{
+            display: block;
+            border: 1px solid green;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+    <script src="c:\jquery\jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('button').click(function(){
+                $('p').parents().css({"border":"2px solid red"});  // parent()는 부모(바로상위객체), parents()는 조상(상위전체)
+            });
+        
+        });
+    </script>
+</head>
+<body>
+    <h1>parent()메서드</h1>
+    <div class="container">
+        <div> div 요소
+            <ul> ul 요소
+                <li> li 요소1 </li>
+                <li> li 요소2
+                    <p> p요소 !기준!</p>  <!-- p기준 -->
+                       <span>span 요소</span>
+                </li>
+                <li> li 요소3 </li>
+            </ul>
+        </div>
+    </div>
+    <button>버튼</button>   
+</body>
+</html>
