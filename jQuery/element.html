@@ -8,32 +8,28 @@
     <style>
         .container *{ /* 클래스 container의 전체(*) 선택을 의미 */
             display: block;
-            border: 1px solid green;
-            padding: 5px;
-            margin: 15px;
+            border: thick dotted purple;
+            padding: 20px;
+            margin: 20px;
         }
     </style>
     <script src="c:\jquery\jquery-3.6.0.js"></script>
     <script>
         $(document).ready(function(){
             $('button').click(function(){
-                $('.me').closest('li').css({"border":"2px solid red"});
-            });li
-        
+                $('.me').closest('li').css({"border":"thick dotted red"});
+            });li  
         });
     </script>
 </head>
 <body>
-    <h1>.closet 메서드</h1>
+    <h1>.closest 메서드</h1>
     <div class="container">
-        <div> div 요소
-            <ul> ul 요소
-                <li> li 요소1 </li>
-                <li> li 요소2
-                    <p> p요소 !기준!</p>  
-                       <span>span 요소</span>
+        <div> div 조상
+            <ul> ul 부모
+                <li class="me"> li 자식, 나
+                    <span> span 손자 </span>
                 </li>
-                <li class="me"> li 요소3 </li> <!-- li3기준 -->
             </ul>
         </div>
     </div>
