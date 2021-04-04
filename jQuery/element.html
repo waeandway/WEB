@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>요소탐색</title>
     <style>
-        .container *{
+        .container *{ /* 클래스 container의 전체(*) 선택을 의미 */
             display: block;
             border: 1px solid green;
             padding: 5px;
@@ -17,8 +17,8 @@
     <script>
         $(document).ready(function(){
             $('button').click(function(){
-                $('p').parents().css({"border":"2px solid red"});  // parent()는 부모(바로상위객체), parents()는 조상(상위전체)
-            });
+                $('.me').closest('li').css({"border":"2px solid red"});
+            });li
         
         });
     </script>
@@ -30,10 +30,10 @@
             <ul> ul 요소
                 <li> li 요소1 </li>
                 <li> li 요소2
-                    <p> p요소 !기준!</p>  <!-- p기준 -->
+                    <p> p요소 !기준!</p>  
                        <span>span 요소</span>
                 </li>
-                <li> li 요소3 </li>
+                <li class="me"> li 요소3 </li> <!-- li3기준 -->
             </ul>
         </div>
     </div>
