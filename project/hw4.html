@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="c:\jquery\jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.form').focus(function(){
+                $(this).css("background-color", "lightcyan");
+            });
+            $('.form').blur(function(){
+                $(this).css("background-color", "white");
+            });
+            $('.form').dblclick(function(){
+                $(this).css({"background-color":"red", "color":"white"});
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>수강 신청</h2>
+    <form>
+        아이디 <input type="text" name="id" class="form"> <br><br>
+        비밀번호 <input type="password" name="pw" class="form"> <br><br>
+        이름 <input type="text" name="name" class="form"> <br><br>
+        <input type="submit" value="전송">
+    </form>
+</body>
+</html>

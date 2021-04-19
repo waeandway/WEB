@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>hw</title>
+    <script src="c:\jquery\jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#check').click(function(){
+                $('#sign').prop('checked', true);
+                $('#status').html("결재가 진행됩니다..");
+            });
+            $('#uncheck').click(function(){
+                $('#sign').prop('checked', false);
+                $('#status').html("결재 선택이 취소되었습니다..");
+            })
+
+        })
+    </script>
+</head>
+<body>
+    <h1>checkbox 선택 취소</h1>
+    <input type="checkbox" id="sign"> 결재를 진행할까요? [진행][취소]
+    <br><br>
+    <button id="check" value="진행">진행</button> <button id="uncheck" value="취소">취소</button>
+    <br><br>
+    Note : 결재 진행을 위해서 [진행][취소] 버튼을 눌러 주세요.
+    <br><br>
+    <div id="status"></div>
+</body>
+</html>
