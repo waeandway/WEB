@@ -1,31 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-
-    <title>Document</title>
+    <title>PRACTICE!</title>
 </head>
 <script src="c:\jquery\jquery-3.6.0.js"></script>
+<style>
+    .container *{
+        display:block;
+        border:1px solid green;
+        padding:5px;
+        margin:15px;
+    }
+    
+
+
+
+</style>
 <script>
-    $(document).ready(function(){
+    $(function(){
+        var cntFun = function(){
+            var cnt = $('input:checked').length;
+            $('#syu').html(cnt);
+        };
+        cntFun();
+        $('input').on("click", cntFun);
 
-        $('#major').change(function(){
-            $('#syu').html($('#major option:selected').text() + " 학생입니다.");
+        
+    }) 
 
-        });
-    })
+
+
+    
+
+
+
 </script>
 <body>
-    <h1>select 항목 선택</h1>
-    당신의 소속 학과는 
-    <select id="major">
-        <option value="멀티미디어학과">멀티미디어학과</option>
-        <option value="컴퓨터공학과">컴퓨터공학과</option>
-        <option value="정보통신학과">정보통신학과</option>
-        <option value="게임학과">게임학과</option>
-        <option value="융합소프트웨어학과">융합소프트웨어학과</option>
-    </select>
-    <br>
+
+    <input type="checkbox" name="subject" value="국어">국어
+    <input type="checkbox" name="subject" value="수학" checked>수학
+    <input type="checkbox" name="subject" value="영어">영어
+    <button>클릭</button>
     <div id="syu"></div>
+
 </body>
 </html>

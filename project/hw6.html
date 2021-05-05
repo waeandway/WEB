@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>hw6</title>
+    <script src="c:\jQuery\jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#Slide_Down').click(function(){
+                $('#panel').slideDown();
+            });
+            $('#Slide_Up').click(function(){
+                $('#panel').slideUp(1000);
+            });
+            $('#Toggle_Sliding').click(function(){
+                $('#panel').slideToggle("slow");
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1>.slideUp .slideDown Test</h1>
+    <button id="Slide_Down">Slide Down</button>
+    <button id="Slide_Up">Slide Up</button>
+    <button id="Toggle_Sliding">Toggle Sliding</button>
+    <p>
+    <div id="panel" style="display: none;">
+        <img src="C:/jQuery/school.jpg" width="450px" height="300px">
+    </div>
+</body>
+</html>
