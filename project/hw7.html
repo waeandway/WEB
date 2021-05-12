@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>animate</title>
+    <style>
+        #square {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            margin-left: 10px;
+            position: relative;
+        }
+
+
+    </style>
+    <script src="c:\jQuery\jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#right').click(function(){
+                $('#square').animate({left: "300px"}, 2000)
+            });
+            $('#left').click(function(){
+                $('#square').animate({left: "0px"}, 2000)
+            });
+            $('#round').click(function(){
+                var box = $('#square');
+                box.animate({left: "300px"}, 2000, function(){
+                    box.animate({top: "300px"}, 2000, function(){
+                        box.animate({left: "0px"}, 2000, function(){
+                            box.animate({top: "0px"}, 2000);
+                        });
+                    });
+                });
+            })
+
+        })
+    </script>
+</head>
+<body>
+    <h2>Animation method</h2>
+    <button id="right">right</button>
+    <button id="left">left</button>
+    <button id="round">round</button>
+    <p>
+    <div id="square"></div>
+</body>
+</html>
