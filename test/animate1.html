@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>animate 1</title>
+</head>
+<script src="c:\jquery\jquery-3.6.0.js"></script>
+<style>
+    body * {
+            font-family: 'RixYeoljeongdo_Regular';
+        }
+        @font-face {
+            font-family: 'RixYeoljeongdo_Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/RixYeoljeongdo_Regular.woff') format('woff');
+            font-weight: 100;
+        }
+
+    #square {
+        text-align: center;
+        background-color: black;
+        width: 200px;
+        height: 200px;
+        display: inline-block;
+        position: relative; 
+    }
+ 
+</style>
+
+<script>
+//$(document).ready(function(){});
+//$(function(){});
+//$('').click(function(){});
+//$('').on("click", function(){});
+$(document).ready(function(){
+    $('button').on("click", function(){
+        $('#square').animate({
+            left: "500px",
+            border : "2px solid 10px "                       
+        },
+        2000,
+
+        )
+    })
+})
+</script>
+<body>
+    <h1 >animate 1 문제</h1>
+    <button style="border: black solid 2px; background-color: white; border-radius: 50%;"><b>right</b></button><p>
+    <div id="square"></div> 
+</body>
+</html>
